@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# PyTorch models
+*.pt
+*.pth
+
+# Firebase secret key
+firebase_key.json
+
+# Logs
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Node / React
+ui/node_modules/
+ui/build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
