@@ -190,26 +190,27 @@ UrbanPulse/
 
 ---
 
-## ▶️ How To Run
+## ▶️ How to Run
 
 ### Backend
 
-```bash
 pip install -r requirement.txt
 python main.py
 
-Ensure Firebase service key is placed in:
+Ensure the Firebase service key is placed at:
 
 src/firebase_key.json
-Frontend
+
+### Frontend
 cd ui
 npm install
 npm start
-🚀 Future Improvements
+
+## 🚀 Future Improvements
 
 Real-time streaming ingestion
 
-Cloud deployment
+Cloud-native deployment
 
 Threshold auto-calibration
 
@@ -219,7 +220,7 @@ Live carbon savings counter
 
 Historical performance analytics
 
-🎯 Positioning
+## 🎯 Positioning
 
 UrbanPulse is a configurable energy decision intelligence system designed to reduce:
 
@@ -231,12 +232,11 @@ Operational instability
 
 Preventable infrastructure costs
 
-It bridges predictive modeling and economically rational infrastructure control.
+It bridges predictive modeling with economically rational infrastructure control.
 
-👤 Author
+##👤 Author
 
 Nithish Kannan M
 B.Tech CSE
 AI & ML Systems
-
 
