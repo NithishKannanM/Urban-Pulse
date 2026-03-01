@@ -29,7 +29,7 @@ UrbanPulse converts signals into economically justified operational decisions.
 
 ---
 
-## 🧠 System Overview
+##  System Overview
 
 UrbanPulse operates in four stages:
 
@@ -64,7 +64,7 @@ Then outputs:
 
 ---
 
-## 🏗 Architecture
+##  Architecture
 
 
 Telemetry (CSV / Stream)
@@ -86,7 +86,7 @@ React Infrastructure Console
 
 ---
 
-## 🖥 UI Preview
+## UI Preview
 
 > Replace the placeholder below with your actual screenshot.
 
