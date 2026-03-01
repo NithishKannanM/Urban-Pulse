@@ -87,8 +87,7 @@ React Infrastructure Console
 ---
 
 ## UI Preview
-
-
+<img width="1911" height="962" alt="Screenshot From 2026-03-01 21-56-31" src="https://github.com/user-attachments/assets/575a3963-8f82-4981-9658-8a24d6a38435" />
 
 
 
@@ -239,4 +238,5 @@ It bridges predictive modeling and economically rational infrastructure control.
 Nithish Kannan M
 B.Tech CSE
 AI & ML Systems
+
 
