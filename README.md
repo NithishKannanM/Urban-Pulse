@@ -111,41 +111,41 @@ React Infrastructure Console
 
 Energy Imbalance:
 
-
+```
 Energy (kWh) = |ΔP| × Time Window
-
+```
 
 Energy Cost:
 
-
+```
 Energy Cost = Energy × Electricity Price
-
+```
 
 Carbon Emission:
 
-
+```
 CO₂ (kg) = Energy × Carbon Intensity
-
+```
 
 Carbon Cost:
 
-
+```
 Carbon Cost = CO₂ × Carbon Price
-
+```
 
 Total Loss:
 
-
+```
 Total Loss = Energy Cost + Carbon Cost
-
+```
 
 Decision Logic:
 
-
+```
 If Expected Wait Loss > Intervention Cost → INTERVENE
 If Moderate Risk → PREPARE
 Else → MONITOR
-
+```
 
 ---
 
@@ -243,5 +243,6 @@ It bridges predictive modeling with economically rational infrastructure control
 Nithish Kannan M
 B.Tech CSE
 AI & ML Systems
+
 
 
