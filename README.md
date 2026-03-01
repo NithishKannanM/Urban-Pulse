@@ -88,12 +88,7 @@ React Infrastructure Console
 
 ## UI Preview
 
-> Replace the placeholder below with your actual screenshot.
 
-
-[ UI Screenshot Placeholder ]
-
-After adding screenshot:
 
 
 
@@ -244,3 +239,4 @@ It bridges predictive modeling and economically rational infrastructure control.
 Nithish Kannan M
 B.Tech CSE
 AI & ML Systems
+
