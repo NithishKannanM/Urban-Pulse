@@ -1,174 +1,246 @@
-# Urban Pulse  
-Real-Time Student Crowd Management via Network Activity Analysis
+# UrbanPulse
+## Decision-Centric Energy Intelligence Console
 
-Urban Pulse is an end-to-end AI system designed to monitor, analyze, and predict student crowd density using network activity signals. The project combines temporal modeling, decision logic, and reasoning layers to produce interpretable and reliable real-time insights.
+UrbanPulse is a deterministic infrastructure decision system that converts real-time electrical telemetry into economically justified operational actions for campuses, data centers, and industrial facilities.
 
----
+It combines time-series forecasting, risk modeling, and cost-aware policy evaluation to recommend when to:
 
-## 1. Project Overview
+- **MONITOR**
+- **PREPARE**
+- **INTERVENE**
 
-Urban Pulse replaces traditional crowd monitoring methods (e.g., CCTV/manual reporting) with a data-driven approach based on:
-
-- Network activity signal patterns  
-- Time-series forecasting (GRU-based model)  
-- Decision index evaluation  
-- Reasoning layer for explainability  
-- Real-time dashboard integration via Firebase  
-
-The system is structured as a modular AI pipeline rather than a standalone prediction model.
+This is not a chatbot-based AI dashboard.  
+UrbanPulse is a mathematically grounded decision-support system designed for infrastructure operators.
 
 ---
 
-## 2. System Architecture
+## 🚩 Problem Statement
+
+Large infrastructure environments (campuses, data centers, industries) consume significant electricity.  
+Fluctuations, overload patterns, and inefficiencies can lead to:
+
+- Energy wastage  
+- Increased carbon emissions  
+- Equipment stress  
+- Avoidable operational costs  
+
+Most monitoring dashboards only show metrics.  
+UrbanPulse converts signals into economically justified operational decisions.
+
+---
+
+## 🧠 System Overview
+
+UrbanPulse operates in four stages:
+
+### 1️⃣ Telemetry Ingestion
+Voltage, current, power, reactive power, power factor, temperature, fluctuation.
+
+### 2️⃣ Temporal Forecasting Model
+A PyTorch-based model predicts:
+- Risk score  
+- Regime level  
+
+### 3️⃣ Mathematical Cost Modeling
+Failure loss is computed using:
+
+- Energy imbalance (kWh)
+- Electricity price
+- Carbon intensity
+- Carbon pricing
+
+### 4️⃣ Deterministic Policy Engine
+Compares:
+
+**Expected Wait Loss**  
+vs  
+**Intervention Cost**
+
+Then outputs:
+
+- MONITOR  
+- PREPARE  
+- INTERVENE  
+
+---
+
+## 🏗 Architecture
 
 
-Dataset / Cloud Source
+Telemetry (CSV / Stream)
 ↓
-Data Ingestion
+Feature Window Builder
 ↓
-Preprocessing & Feature Engineering
+Temporal Model (PyTorch)
 ↓
-Temporal Model (GRU)
+Risk & Regime Output
 ↓
-Decision Engine (Index Matrix Logic)
+Cost Model
 ↓
-Reasoning Layer
+Policy Engine
 ↓
-Firebase Sync
+Firebase (Real-time Logs)
 ↓
-React Dashboard
+React Infrastructure Console
 
 
 ---
 
-## 3. Project Structure
+## 🖥 UI Preview
+
+> Replace the placeholder below with your actual screenshot.
 
 
-URBAN_PULSE/
+[ UI Screenshot Placeholder ]
+
+After adding screenshot:
+
+
+
+---
+
+## ✨ Key Features
+
+- Deterministic action policy (no black-box LLM decisions)
+- Economic loss modeling
+- Carbon impact estimation
+- Real-time Firebase logging
+- Infrastructure-grade UI console
+- Configurable deployment context:
+  - Campus
+  - Data Center
+  - Industrial Facility
+
+---
+
+## 💰 Economic Model
+
+Energy Imbalance:
+
+
+Energy (kWh) = |ΔP| × Time Window
+
+
+Energy Cost:
+
+
+Energy Cost = Energy × Electricity Price
+
+
+Carbon Emission:
+
+
+CO₂ (kg) = Energy × Carbon Intensity
+
+
+Carbon Cost:
+
+
+Carbon Cost = CO₂ × Carbon Price
+
+
+Total Loss:
+
+
+Total Loss = Energy Cost + Carbon Cost
+
+
+Decision Logic:
+
+
+If Expected Wait Loss > Intervention Cost → INTERVENE
+If Moderate Risk → PREPARE
+Else → MONITOR
+
+
+---
+
+## 📁 Repository Structure
+
+
+UrbanPulse/
 │
-├── config/ # Configuration files
-├── dataset/ # Raw and processed datasets
-├── notebook/ # Experimental notebooks
+├── dataset/
+├── notebook/
+├── reference/
 ├── scripts/
-│ └── train.py # Model training script
-│
 ├── src/
-│ ├── data/ # Data loading and preprocessing
-│ ├── signals/ # Network signal feature extraction
-│ ├── models/ # GRU temporal model
-│ ├── decision/ # Decision index matrix logic
-│ ├── reasoning/ # Explanation / reasoning module
-│ ├── firebase_client.py # Firebase integration
+│ ├── models/
+│ ├── decision/
+│ ├── cost/
+│ ├── mitigation/
+│ └── firebase_client.py
 │
-├── ui/ # React frontend
-│
-├── pipeline.py # Full inference pipeline
-├── main.py # Entry point
-├── requirements.txt
-├── README.md
+├── ui/ # React Infrastructure Console
+├── main.py
+├── pipeline.py
+├── requirement.txt
+└── README.md
 
 
 ---
 
-## 4. Core Components
+## 🛠 Tech Stack
 
-### 4.1 Temporal Model
-- GRU-based sequence model
-- Learns short-term crowd density patterns
-- Designed for time-series signal forecasting
+### Backend
+- Python
+- PyTorch
+- Firebase (Firestore)
+- NumPy
+- Pandas
 
-### 4.2 Decision Engine
-- Index-based evaluation logic
-- Converts model outputs into interpretable risk levels
-- Structured to allow threshold tuning and future reinforcement learning integration
-
-### 4.3 Reasoning Layer
-- Generates human-readable explanations for decisions
-- Improves transparency and reliability
-- Designed to reduce black-box behavior
-
-### 4.4 Firebase Integration
-- Stores inference results
-- Enables real-time UI synchronization
+### Frontend
+- React
+- Recharts
+- Industrial dark theme UI
 
 ---
 
-## 5. Installation & Setup
+## ▶️ How To Run
 
-### Clone the Repository
+### Backend
 
-
-git clone <https://github.com/NithishKannanM/Urban-Pulse>
-cd Urban-Pulse
-
-
-### Install Backend Dependencies
-
-
-pip install -r requirements.txt
-
-
-### Add Firebase Credentials
-
-Place your Firebase service account key inside:
-
-
-src/firebase_key.json
-
-
-Do not commit this file to version control.
-
-### Run Backend Pipeline
-
-
+```bash
+pip install -r requirement.txt
 python main.py
 
+Ensure Firebase service key is placed in:
 
-### Run Frontend
-
-
+src/firebase_key.json
+Frontend
 cd ui
 npm install
 npm start
+🚀 Future Improvements
 
+Real-time streaming ingestion
 
----
+Cloud deployment
 
-## 6. Model Configuration
+Threshold auto-calibration
 
-Specify the following details once finalized:
+Multi-site monitoring support
 
-- Architecture: GRU
-- Sequence window size:
-- Prediction horizon:
-- Loss function:
-- Optimizer:
-- Training dataset size:
+Live carbon savings counter
 
----
+Historical performance analytics
 
-## 7. Design Principles
+🎯 Positioning
 
-- Modular architecture
-- Separation of modeling and decision logic
-- Explainability-focused system design
-- Real-time synchronization capability
-- Scalable for cloud deployment
+UrbanPulse is a configurable energy decision intelligence system designed to reduce:
 
----
+Electricity waste
 
-## 8. Future Enhancements
+Carbon emissions
 
-- Data drift detection module
-- Reinforcement learning-based adaptive thresholding
-- Latency optimization
-- Cloud-native deployment
-- Multi-campus simulation support
+Operational instability
 
----
+Preventable infrastructure costs
 
-## 9. Author
+It bridges predictive modeling and economically rational infrastructure control.
 
-Nithish Kannan M  
-B.Tech CSE  
-AI Systems and Machine Learning
+👤 Author
+
+Nithish Kannan M
+B.Tech CSE
+AI & ML Systems
