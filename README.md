@@ -66,7 +66,7 @@ Then outputs:
 
 ##  Architecture
 
-
+```
 Telemetry (CSV / Stream)
 ↓
 Feature Window Builder
@@ -82,7 +82,7 @@ Policy Engine
 Firebase (Real-time Logs)
 ↓
 React Infrastructure Console
-
+```
 
 ---
 
@@ -151,7 +151,7 @@ Else → MONITOR
 
 ## 📁 Repository Structure
 
-
+```
 UrbanPulse/
 │
 ├── dataset/
@@ -170,7 +170,7 @@ UrbanPulse/
 ├── pipeline.py
 ├── requirement.txt
 └── README.md
-
+```
 
 ---
 
@@ -193,18 +193,22 @@ UrbanPulse/
 ## ▶️ How to Run
 
 ### Backend
-
+```
 pip install -r requirement.txt
 python main.py
+```
 
 Ensure the Firebase service key is placed at:
-
+```
 src/firebase_key.json
+```
 
 ### Frontend
+```
 cd ui
 npm install
 npm start
+```
 
 ## 🚀 Future Improvements
 
@@ -234,9 +238,10 @@ Preventable infrastructure costs
 
 It bridges predictive modeling with economically rational infrastructure control.
 
-##👤 Author
+## 👤 Author
 
 Nithish Kannan M
 B.Tech CSE
 AI & ML Systems
+
 
