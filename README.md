@@ -243,6 +243,3 @@ It bridges predictive modeling with economically rational infrastructure control
 Nithish Kannan M
 B.Tech CSE
 AI & ML Systems
-
-
-

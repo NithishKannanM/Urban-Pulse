@@ -17,6 +17,7 @@ import {
   Filler,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
+import SmartGridVisualizer from './SmartGridVisualizer';
 import './App.css';
 
 /* ── Register Chart.js ── */
@@ -766,6 +767,15 @@ function App() {
               <div className="projection-subtext">Net savings after intervention</div>
             </div>
           </div>
+        </div>
+
+        {/* ━━ 10) SMART GRID VISUALIZER ━━ */}
+        <div className="panel panel-wide">
+          <div className="panel-header">
+            <span className="panel-title">Smart Grid Visualizer</span>
+            <span className="panel-badge">Live Simulation</span>
+          </div>
+          <SmartGridVisualizer data={decision} />
         </div>
 
         {/* ━━ TELEMETRY STRIP ━━ */}
